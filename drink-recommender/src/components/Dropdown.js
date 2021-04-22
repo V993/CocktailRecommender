@@ -1,5 +1,6 @@
 import { Component } from "react";
 import RandomCocktail from "./RandomCocktail"
+import IngredientSearch from "./IngredientSearch"
 
 
 class Dropdown extends Component {
@@ -8,6 +9,7 @@ class Dropdown extends Component {
             <div class="container">
                 <div class="wrapper">
                     <RandomCocktail />
+                    <IngredientSearch />
                 </div>
             </div>
         )

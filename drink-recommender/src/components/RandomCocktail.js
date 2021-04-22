@@ -93,7 +93,7 @@ class RandomCocktail extends Component {
     render() {
         return (
             <div className="container">
-                <div className="search">
+                <div className="containerOverlay">
                     <button className="beeg-button" onClick={ this.handleSearchClick }>
                         <h1 id="title">Random Cocktail Generator</h1>
                     </button>
@@ -103,6 +103,7 @@ class RandomCocktail extends Component {
                 <table id="drink">
                     <tbody>{ this.makeTable() }</tbody>
                 </table>
+                <br></br>
             </div>
         )
     }
