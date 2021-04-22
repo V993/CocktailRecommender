@@ -1,7 +1,32 @@
-.search  {
+.containerOverlay {
   margin: auto;
   width: 50%;
   padding: 10px;
+}
+
+.search  {
+  padding: 10px;
+  text-align: center;
+}
+
+.search-button {
+  margin: 10px;
+  background-color: salmon;
+  border-radius: 20px;
+}
+
+.search-button:hover {
+  background-color:rgb(243, 86, 69)
+}
+
+.search-bar {
+  border-radius: 20px;
+  text-align: center;
+  margin:10px;
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
 
 .wrapper {
@@ -60,5 +85,5 @@
 }
 
 .cell:hover {
-  
+  background-color: rgb(243, 86, 69);
 }
