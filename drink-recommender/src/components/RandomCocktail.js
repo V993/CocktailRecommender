@@ -46,10 +46,20 @@ class RandomCocktail extends Component {
             let name = currData.drinks[0].strDrink;
             let alcoholic = currData.drinks[0].strAlcoholic;
             let instructions = currData.drinks[0].strInstructions;
+            let ingredients = []
+           
+            for (const [key, value] of Object.entries(currData.drinks[0])) {
+                // console.log(`${key}: ${value}`);
+                if (key.includes("strIngredient"))
+                    if(value != null)
+                        ingredients.push(value);
+            }
+
+            console.log(ingredients);
+
             table.push(
                 <tr>
-                    <td>{name}</td>
-                    <td>({alcoholic})</td>
+                    <td id="cell">{name} ({alcoholic})</td>
                 </tr>
             );
             table.push(
@@ -57,6 +67,15 @@ class RandomCocktail extends Component {
                     <td>{instructions}</td>
                 </tr>
             )
+            ingredients.forEach(ingredient => {
+                if (ingredient)
+                table.push(
+                    <tr>
+                        <td>{ingredient}</td>
+                    </tr>
+                )
+                
+            });
             return table;
         }
     };
@@ -66,11 +85,12 @@ class RandomCocktail extends Component {
             <div className="container">
                 <div className="search">
                     <button className="beeg-button" onClick={ this.handleSearchClick }>
-                        Random Cocktail Generator
+                        <h1 id="title">Random Cocktail Generator</h1>
                     </button>
                 </div>
+                <br></br>
 
-                <table id="data">
+                <table id="drink">
                     <tbody>{ this.makeTable() }</tbody>
                 </table>
             </div>
