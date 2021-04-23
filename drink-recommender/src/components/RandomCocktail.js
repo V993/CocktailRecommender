@@ -45,17 +45,15 @@ class RandomCocktail extends Component {
             let name = currData.drinks[0].strDrink;
             let alcoholic = currData.drinks[0].strAlcoholic;
             let instructions = currData.drinks[0].strInstructions;
+            let image = currData.drinks[0].strDrinkThumb;
             let ingredients = []
             let amounts = [];
 
             for (const [key, value] of Object.entries(currData.drinks[0])) {
                 // console.log(`${key}: ${value}`);
-                if (key.includes("strIngredient"))
-                    if (value != null)
+                if (key.includes("strIngredient") && value != null)
                         ingredients.push(value);
-
-                if (key.includes("strMeasure"))
-                    if (value != null)
+                if (key.includes("strMeasure") && value != null)
                         amounts.push(value);
             }
 
@@ -64,6 +62,11 @@ class RandomCocktail extends Component {
                     <td colspan="2">{ name } ({ alcoholic })</td>
                 </tr>
             );
+            table.push(
+                <tr>
+                    <td colspan="2"><img src={ image + "/preview" } alt="Drink" /></td>
+                </tr>
+            )
             table.push(
                 <tr>
                     <td colspan="2">{ instructions }</td>
@@ -81,10 +84,9 @@ class RandomCocktail extends Component {
                     table.push(
                         <tr>
                             <td>{ ingredient }</td>
-                            <td>{ amounts[i] }</td>
+                            <td>{ amounts[i++] }</td>
                         </tr>
                     )
-                i++;
             });
             return table;
         }
