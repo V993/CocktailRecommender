@@ -47,26 +47,26 @@ class RandomCocktail extends Component {
             let instructions = currData.drinks[0].strInstructions;
             let ingredients = []
             let amounts = [];
-           
+
             for (const [key, value] of Object.entries(currData.drinks[0])) {
                 // console.log(`${key}: ${value}`);
                 if (key.includes("strIngredient"))
-                    if(value != null)
+                    if (value != null)
                         ingredients.push(value);
 
                 if (key.includes("strMeasure"))
-                    if(value != null)
+                    if (value != null)
                         amounts.push(value);
             }
 
             table.push(
                 <tr>
-                    <td colspan="2">{name} ({alcoholic})</td>
+                    <td colspan="2">{ name } ({ alcoholic })</td>
                 </tr>
             );
             table.push(
                 <tr>
-                    <td colspan="2">{instructions}</td>
+                    <td colspan="2">{ instructions }</td>
                 </tr>
             )
             table.push(
@@ -78,12 +78,12 @@ class RandomCocktail extends Component {
             let i = 0;
             ingredients.forEach(ingredient => {
                 if (ingredient)
-                table.push(
-                    <tr>
-                        <td>{ingredient}</td>
-                        <td>{amounts[i]}</td>
-                    </tr>
-                )
+                    table.push(
+                        <tr>
+                            <td>{ ingredient }</td>
+                            <td>{ amounts[i] }</td>
+                        </tr>
+                    )
                 i++;
             });
             return table;

@@ -50,6 +50,7 @@ input:focus::placeholder {
   width: 100%;
 }
 
+
 #drink td, #drink th {
   border: 1px solid #ddd;
   padding: 8px;
