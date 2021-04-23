@@ -88,3 +88,7 @@ input:focus::placeholder {
 .cell:hover {
   background-color: rgb(243, 86, 69);
 }
+
+img {
+  border-radius: 20px;
+}
