@@ -4,6 +4,32 @@
   padding: 10px;
 }
 
+.search  {
+  padding: 10px;
+  text-align: center;
+}
+
+.search-button {
+  margin: 10px;
+  background-color: salmon;
+  border-radius: 20px;
+}
+
+.search-button:hover {
+  background-color:rgb(243, 86, 69)
+}
+
+.search-bar {
+  border-radius: 20px;
+  text-align: center;
+  margin:10px;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+
 .wrapper {
   background-color: seashell;
   margin: auto;
@@ -24,6 +50,7 @@
   border: 3px solid #ddd;
   width: 100%;
 }
+
 
 #drink td, #drink th {
   border: 1px solid #ddd;
