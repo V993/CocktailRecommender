@@ -50,14 +50,16 @@ class CategorySearch extends Component {
             return table;
         } else {
             console.log(currData);
-            currData.drinks.forEach( (cate) => {
-                table.push(
-                    <tr>
-                        <td>{cate.strDrink}</td>
-                    </tr>
-                )
-            })
-            return table;
+            if (currData.length > 0) {
+                currData.drinks.forEach( (cate) => {
+                    table.push(
+                        <tr>
+                            <td>{cate.strDrink}</td>
+                        </tr>
+                    )
+                })
+                return table;
+            }
         }
     };
 
