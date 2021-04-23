@@ -16,14 +16,32 @@ class CocktailSearch extends Component {
         this.setState({ cocktailName: event.target.value });
     };
 
+    handleClick = async () => {
+        console.log("you've been duped");
+        alert("enter cocktail name!");
+    }
+
+
 
     handleSearchClick = async () => {
         let cocktailName = this.state.cocktailName;
         let linkToAPI = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + cocktailName;
+        //trying to catch empty strings
+        if (cocktailName.length == 0) {
+            alert("No input found. Enter a cocktail name");
+            this.setState({ found: false });
+            return console.error("no input found");
+
+
+        }
+
         try {
+
             let response = await axios.get(linkToAPI);
             this.setState({ apiData: response.data, found: true });
+
         } catch (error) {
+
             if (error.response) {
 
                 /*
@@ -32,7 +50,7 @@ class CocktailSearch extends Component {
                  */
                 console.log(error.response.data); //Not Found
                 console.log(error.response.status); //404
-                this.setState({ found: false });
+
             }
         }
     };
@@ -47,7 +65,7 @@ class CocktailSearch extends Component {
         if (!foundMatch) {
             table.push(
                 <tr key={ -3 }>
-                    <td>Not Found</td>
+                    <td>Discover new cocktails</td>
                 </tr>
             );
             return table;
@@ -69,9 +87,10 @@ class CocktailSearch extends Component {
             }
 
             currData.drinks.forEach((drink) => {
+
                 table.push(
                     <tr>
-                        <td colspan="2"> <b>{ drink.strDrink } </b> </td>
+                        <td colspan="2"><img src={ drink.strDrinkThumb + "/preview" } alt={ ingredients } /></td>
 
                     </tr>
 
@@ -128,6 +147,12 @@ class CocktailSearch extends Component {
     render() {
         return (
             <div className="container">
+                <div className="containerOverlay">
+                    <button className="beeg-button" onClick={ this.handleClick }>
+                        <h1 id="title"> Search Cocktail by Name :  </h1>
+                    </button>
+                    <br></br>
+                </div>
                 <div className="search">
 
                     <input
