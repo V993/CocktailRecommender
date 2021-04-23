@@ -54,14 +54,16 @@ class IngredientSearch extends Component {
             return table;
         } else {
             console.log(currData);
-            currData.drinks.forEach( (drink) => {
-                table.push(
-                    <tr>
-                        <td>{drink.strDrink}</td>
-                    </tr>
-                )
-            })
-            return table;
+            if (currData.length > 0) {
+                currData.drinks.forEach( (drink) => {
+                    table.push(
+                        <tr>
+                            <td>{drink.strDrink}</td>
+                        </tr>
+                    )
+                })
+                return table;    
+            }
         }
     };
 
