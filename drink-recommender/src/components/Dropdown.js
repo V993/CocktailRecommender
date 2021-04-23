@@ -1,32 +1,28 @@
 import { Component } from "react";
-import RandomCocktail from "./RandomCocktail"
+import RandomCocktail from "./RandomCocktail";
 
-import CocktailSearch from "./CocktailSearch"
+import CocktailSearch from "./CocktailSearch";
 
-import IngredientSearch from "./IngredientSearch"
-import CategoryCocktail from "./CategoryCocktail"
-import ListCategories from "./ListCategories"
-
-
+import IngredientSearch from "./IngredientSearch";
+import CategoryCocktail from "./CategoryCocktail";
+import ListCategories from "./ListCategories";
 
 class Dropdown extends Component {
-    render() {
-        return (
-            <div class="container">
-                <div class="wrapper">
-                    <RandomCocktail />
+  render() {
+    return (
+      <div class="container">
+        <div class="wrapper">
+          <RandomCocktail />
 
-                    <CocktailSearch />
+          <CocktailSearch />
 
-
-                    <IngredientSearch />
-                    <ListCategories />
-                    <CategoryCocktail />
-
-                </div>
-            </div>
-        )
-    }
+          <IngredientSearch />
+          <ListCategories />
+          <CategoryCocktail />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Dropdown;
