@@ -4,7 +4,7 @@
   padding: 10px;
 }
 
-.search  {
+.search {
   padding: 10px;
   text-align: center;
 }
@@ -16,13 +16,13 @@
 }
 
 .search-button:hover {
-  background-color:rgb(243, 86, 69)
+  background-color: rgb(243, 86, 69);
 }
 
 .search-bar {
   border-radius: 20px;
   text-align: center;
-  margin:10px;
+  margin: 10px;
 }
 
 input:focus::placeholder {
@@ -50,21 +50,25 @@ input:focus::placeholder {
   width: 100%;
 }
 
-
-#drink td, #drink th {
+#drink td,
+#drink th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#drink tr:nth-child(even){background-color: #f2f2f2;}
+#drink tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-#drink tr:hover {background-color: #ddd;}
+#drink tr:hover {
+  background-color: #ddd;
+}
 
 #drink th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
@@ -75,7 +79,7 @@ input:focus::placeholder {
 }
 
 .beeg-button:hover {
-  background-color:rgb(243, 86, 69);
+  background-color: rgb(243, 86, 69);
   color: inherit;
 }
 
