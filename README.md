@@ -1,3 +1,3 @@
 # PracticeAPI
 
-Find the app at: https://v993.github.io/CocktailFinder/
+Find the app at: https://v993.github.io/PracticeAPI/
