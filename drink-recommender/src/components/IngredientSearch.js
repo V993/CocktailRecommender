@@ -24,6 +24,8 @@ class IngredientSearch extends Component {
         let ingredient = this.state.ingredient;
         let linkToAPI = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + ingredient;
 
+        if (ingredient.length === 0) alert("Please enter an ingredient.");
+
         try {
             let response = await axios.get(linkToAPI);
             this.setState({ apiData: response.data, found: true });

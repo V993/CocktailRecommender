@@ -27,8 +27,8 @@ class CocktailSearch extends Component {
         let cocktailName = this.state.cocktailName;
         let linkToAPI = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + cocktailName;
         //trying to catch empty strings
-        if (cocktailName.length == 0) {
-            alert("No input found. Enter a cocktail name");
+        if (cocktailName.length === 0) {
+            alert("Please enter a cocktail name");
             this.setState({ found: false });
             return console.error("no input found");
 

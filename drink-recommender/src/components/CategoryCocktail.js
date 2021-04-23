@@ -24,6 +24,8 @@ class CategorySearch extends Component {
         let category = this.state.category;
         let API = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=" + category;
 
+        if (category.length === 0) alert("Please enter a category.");
+
         try {
             let response = await axios.get(API);
             this.setState({ apiData: response.data, found: true });
