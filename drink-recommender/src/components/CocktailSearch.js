@@ -87,7 +87,6 @@ class CocktailSearch extends Component {
             }
 
             currData.drinks.forEach((drink) => {
-
                 table.push(
                     <tr>
                         <td colspan="2"><img src={ drink.strDrinkThumb + "/preview" } alt={ ingredients } /></td>
@@ -95,6 +94,15 @@ class CocktailSearch extends Component {
                     </tr>
 
                 )
+
+                table.push(
+                    <tr>
+                        <td colspan="2"> <b>{ drink.strDrink } </b> </td>
+
+                    </tr>
+
+                )
+
                 table.push(
                     <tr>
                         <td colspan="2">{ drink.strInstructions }</td>
