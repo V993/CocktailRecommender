@@ -1,4 +1,4 @@
-.search  {
+.containerOverlay {
   margin: auto;
   width: 50%;
   padding: 10px;
@@ -28,7 +28,6 @@
 input:focus::placeholder {
   color: transparent;
 }
-
 
 .wrapper {
   background-color: seashell;
@@ -87,5 +86,5 @@ input:focus::placeholder {
 }
 
 .cell:hover {
-  
+  background-color: rgb(243, 86, 69);
 }
