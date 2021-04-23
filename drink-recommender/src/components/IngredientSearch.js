@@ -43,6 +43,8 @@ class IngredientSearch extends Component {
     }
   };
 
+  objIsEmpty = (obj) => Object.keys(obj).length === 0;
+
   makeTable = () => {
     let currData = this.state.apiData;
     let foundMatch = this.state.found;
@@ -57,7 +59,7 @@ class IngredientSearch extends Component {
       return table;
     } else {
       console.log(currData);
-      if (currData.length > 0) {
+      if (currData.length > 0 && !this.objIsEmpty(currData)) {
         currData.drinks.forEach((drink) => {
           table.push(
             <tr>

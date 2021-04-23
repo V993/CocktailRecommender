@@ -47,6 +47,12 @@ class CocktailSearch extends Component {
     }
   };
 
+  objIsEmpty = (obj) => {
+    return Object.keys(obj).length === 0;
+  };
+
+  objIsEmpty = (obj) => Object.keys(obj).length === 0;
+
   makeTable = () => {
     let currData = this.state.apiData;
     let foundMatch = this.state.found;
@@ -62,68 +68,71 @@ class CocktailSearch extends Component {
       return table;
     } else {
       // console.log(currData.drinks[0]);
-      let ingredients = [];
-      let amounts = [];
+      if (currData.length > 0 && !this.objIsEmpty(currData)) {
+        let ingredients = [];
+        let amounts = [];
 
-      for (const [key, value] of Object.entries(currData.drinks[0])) {
-        // console.log(`${key}: ${value}`);
-        if (key.includes("strIngredient"))
-          if (value != null) ingredients.push(value);
+        for (const [key, value] of Object.entries(currData.drinks[0])) {
+          // console.log(`${key}: ${value}`);
+          if (key.includes("strIngredient"))
+            if (value != null) ingredients.push(value);
 
-        if (key.includes("strMeasure")) if (value != null) amounts.push(value);
-      }
+          if (key.includes("strMeasure"))
+            if (value != null) amounts.push(value);
+        }
 
-      currData.drinks.forEach((drink) => {
-        table.push(
-          <tr>
-            <td colspan="2">
-              <img src={drink.strDrinkThumb + "/preview"} alt={ingredients} />
-            </td>
-          </tr>
-        );
+        currData.drinks.forEach((drink) => {
+          table.push(
+            <tr>
+              <td colspan="2">
+                <img src={drink.strDrinkThumb + "/preview"} alt={ingredients} />
+              </td>
+            </tr>
+          );
 
-        table.push(
-          <tr>
-            <td colspan="2">
-              {" "}
-              <b>{drink.strDrink} </b>{" "}
-            </td>
-          </tr>
-        );
+          table.push(
+            <tr>
+              <td colspan="2">
+                {" "}
+                <b>{drink.strDrink} </b>{" "}
+              </td>
+            </tr>
+          );
 
-        table.push(
-          <tr>
-            <td colspan="2">{drink.strInstructions}</td>
-          </tr>
-        );
+          table.push(
+            <tr>
+              <td colspan="2">{drink.strInstructions}</td>
+            </tr>
+          );
 
-        table.push(
-          <tr>
-            <td>Ingredients:</td>
-            <td>Amount:</td>
-          </tr>
-        );
-        let i = 0;
-        ingredients.forEach((ingredient) => {
-          if (ingredient)
-            table.push(
-              <tr>
-                <td>{ingredient}</td>
-                <td>{amounts[i]}</td>
-              </tr>
-            );
-          i++;
+          table.push(
+            <tr>
+              <td>Ingredients:</td>
+              <td>Amount:</td>
+            </tr>
+          );
+          let i = 0;
+          ingredients.forEach((ingredient) => {
+            if (ingredient)
+              table.push(
+                <tr>
+                  <td>{ingredient}</td>
+                  <td>{amounts[i]}</td>
+                </tr>
+              );
+            i++;
+          });
         });
-      });
-      // let name = currData.drinks[0].strDrink;
-      // let alcoholic = currData.drinks[0].strAlcoholic;
-      // table.push(
-      //     <tr>
-      //         <td> { name } : { alcoholic } </td>
-      //     </tr>
+        // let name = currData.drinks[0].strDrink;
+        // let alcoholic = currData.drinks[0].strAlcoholic;
+        // table.push(
+        //     <tr>
+        //         <td> { name } : { alcoholic } </td>
+        //     </tr>
 
-      // )
-      return table;
+        // )
+        return table;
+      }
     }
   };
 
