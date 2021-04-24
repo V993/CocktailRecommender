@@ -1,5 +1,6 @@
 .containerOverlay {
-  margin: auto;
+  margin:auto;
+  justify-content: center;
   width: 50%;
   padding: 10px;
 }
@@ -32,8 +33,9 @@ input:focus::placeholder {
 .wrapper {
   background-color: seashell;
   margin: auto;
-  width: 50%;
-  border: 3px solid black;
+  width: 75%;
+  border: 3px solid salmon;
+  border-radius: 20px;
   padding: 10px;
 }
 
