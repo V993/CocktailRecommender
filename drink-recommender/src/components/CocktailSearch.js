@@ -68,7 +68,7 @@ class CocktailSearch extends Component {
       return table;
     } else {
       // console.log(currData.drinks[0]);
-      if (currData.length > 0 && !this.objIsEmpty(currData)) {
+      if (currData.drinks.length > 0 && !this.objIsEmpty(currData)) {
         let ingredients = [];
         let amounts = [];
 
@@ -145,7 +145,7 @@ class CocktailSearch extends Component {
           </button>
           <br></br>
         </div>
-        <div className="search">
+        <div className="search-bar">
           <input
             type="text"
             value={this.state.cocktailName}

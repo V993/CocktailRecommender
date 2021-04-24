@@ -59,8 +59,9 @@ class IngredientSearch extends Component {
       return table;
     } else {
       console.log(currData);
-      if (currData.length > 0 && !this.objIsEmpty(currData)) {
+      if (currData.drinks.length > 0 && !this.objIsEmpty(currData)) {
         currData.drinks.forEach((drink) => {
+          console.log("adding ", drink.strDrink);
           table.push(
             <tr>
               <td>{drink.strDrink}</td>
@@ -68,6 +69,9 @@ class IngredientSearch extends Component {
           );
         });
         return table;
+      }
+      else {
+        console.log('something is wrong homie');
       }
     }
   };
