@@ -1,5 +1,5 @@
 import "./App.css";
-import Dropdown from "./components/Dropdown";
+import { Dropdown } from "./components";
 
 function App() {
   return (

@@ -1,99 +1,107 @@
-.containerOverlay {
-  margin: auto;
-  width: 50%;
-  padding: 10px;
-}
 
-.search {
-  padding: 10px;
-  text-align: center;
-}
+/* Styling for smartphones:  */
+@media (max-width: 600px) {
+    
+  .container {
+    width: 100%;
+  }
 
-.search-button {
-  margin: 10px;
-  background-color: salmon;
-  border-radius: 20px;
-}
+  .containerOverlay {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
 
-.search-button:hover {
-  background-color: rgb(243, 86, 69);
-}
+  .search {
+    padding: 10px;
+    text-align: center;
+  }
 
-.search-bar {
-  border-radius: 20px;
-  text-align: center;
-  margin: 10px;
-}
+  .search-button {
+    margin: 10px;
+    background-color: salmon;
+    border-radius: 20px;
+  }
 
-input:focus::placeholder {
-  color: transparent;
-}
+  .search-button:hover {
+    background-color: rgb(243, 86, 69);
+  }
 
-.wrapper {
-  background-color: seashell;
-  margin: auto;
-  width: 75%;
-  border: 3px solid salmon;
-  border-radius: 20px;
-  padding: 10px;
-}
+  .search-bar {
+    border-radius: 20px;
+    text-align: center;
+    margin: 10px;
+  }
 
-#title {
-  text-align: center;
-  font-family: garamond, sans-serif;
-}
+  input:focus::placeholder {
+    color: transparent;
+  }
 
-#drink {
-  text-align: center;
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  border: 3px solid #ddd;
-  width: 100%;
-}
+  .wrapper {
+    background-color: seashell;
+    margin: auto;
+    border: 3px solid salmon;
+    border-radius: 20px;
+    padding: 5%;
+  }
 
-#drink td,
-#drink th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
+  #title {
+    text-align: center;
+    font-family: garamond, sans-serif;
+  }
 
-#drink tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
+  #drink {
+    text-align: center;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: 3px solid #ddd;
+    width: 100%;
+  }
 
-#drink tr:hover {
-  background-color: #ddd;
-}
+  #drink td,
+  #drink th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
 
-#drink th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: center;
-  background-color: #4caf50;
-  color: white;
-}
+  #drink tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
 
-.beeg-button {
-  border-width: 0px;
-  border-radius: 15px;
-  background-color: salmon;
-}
+  #drink tr:hover {
+    background-color: #ddd;
+  }
 
-.beeg-button:hover {
-  background-color: rgb(243, 86, 69);
-  color: inherit;
-}
+  #drink th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4caf50;
+    color: white;
+  }
 
-.cell {
-  border-width: 0px;
-  border-radius: 15px;
-  background-color: salmon;
-}
+  .beeg-button {
+    border-width: 0px;
+    border-radius: 15px;
+    background-color: salmon;
+  }
 
-.cell:hover {
-  background-color: rgb(243, 86, 69);
-}
+  .beeg-button:hover {
+    background-color: rgb(243, 86, 69);
+    color: inherit;
+  }
 
-img {
-  border-radius: 20px;
+  .cell {
+    border-width: 0px;
+    border-radius: 15px;
+    background-color: salmon;
+  }
+
+  .cell:hover {
+    background-color: rgb(243, 86, 69);
+  }
+
+  img {
+    border-radius: 20px;
+  }
 }
