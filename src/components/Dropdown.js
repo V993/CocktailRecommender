@@ -13,9 +13,7 @@ class Dropdown extends Component {
       <div class="container">
         <div class="wrapper">
           <RandomCocktail />
-
           <CocktailSearch />
-
           <IngredientSearch />
           <ListCategories />
           <CategoryCocktail />
