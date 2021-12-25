@@ -1,10 +1,10 @@
 import "./App.css";
-import { Dropdown } from "./components";
+import { Navigation } from "./components";
 
 function App() {
   return (
     <div className="App">
-      <Dropdown />
+      <Navigation />
     </div>
   );
 }

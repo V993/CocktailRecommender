@@ -59,7 +59,7 @@ class ListCategories extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="">
         <div className="containerOverlay">
           <button className="beeg-button" onClick={this.handleSearchClick}>
             <h1 id="title">All categories of Alcohol : </h1>

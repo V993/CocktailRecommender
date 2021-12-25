@@ -29,6 +29,7 @@ class RandomCocktail extends Component {
   };
 
   makeTable = () => {
+    
     let currData = this.state.apiData;
     let foundMatch = this.state.found;
     let table = [];
@@ -95,9 +96,13 @@ class RandomCocktail extends Component {
     }
   };
 
+  componentDidMount() {
+    this.handleSearchClick()
+  }
+
   render() {
     return (
-      <div className="container">
+      <div className="">  
         <div className="containerOverlay">
           <button className="beeg-button" onClick={this.handleSearchClick}>
             <h1 id="title">Random Cocktail Generator</h1>

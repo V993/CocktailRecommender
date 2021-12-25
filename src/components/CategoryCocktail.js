@@ -70,7 +70,7 @@ class CategorySearch extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="">
         <div className="containerOverlay">
           <button className="beeg-button" onClick={this.handleClick}>
             <h1 id="title">Find a Cocktail by category:</h1>

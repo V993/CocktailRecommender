@@ -138,7 +138,7 @@ class CocktailSearch extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="">
         <div className="containerOverlay">
           <button className="beeg-button" onClick={this.handleClick}>
             <h1 id="title"> Search Cocktail by Name : </h1>
