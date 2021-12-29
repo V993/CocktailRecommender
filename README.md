@@ -10,3 +10,5 @@ cocktails.
 Considering the use cases of this app, great care has been given to ensure it works 
 smoothly (and aesthetically) on computer displays as well as smartphones, with integrated
 switching built straight-in.
+
+This project was built using React, and uses the extensive [CocktailDB](https://www.thecocktaildb.com/about.php) with their free API.
