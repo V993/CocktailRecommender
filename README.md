@@ -11,4 +11,4 @@ Considering the use cases of this app, great care has been given to ensure it wo
 smoothly (and aesthetically) on computer displays as well as smartphones, with integrated
 switching built straight-in.
 
-This project was built using React, and uses the extensive [CocktailDB](https://www.thecocktaildb.com) with their free API.
+This project was built using React, and uses the extensive [CocktailDB](https://www.thecocktaildb.com/api.php) with their free API.
