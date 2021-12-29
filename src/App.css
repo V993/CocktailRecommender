@@ -6,6 +6,15 @@
   min-width:100vh;
 }
 
+.center {
+  display: flex; 
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+}
+
 /* Styling for smartphones:  */
 @media (max-width: 800) {
   .wrapper {
@@ -20,7 +29,7 @@
 @media (min-width: 800px) {
   .navbar {
     display:flex;
-    min-height: 100vh;
+    min-height: 100%;
     max-width: 35vh;
     background-color: beige;
     border-left: 2px solid black;
@@ -29,9 +38,10 @@
     row-gap: 10px;
     transition-duration: 0.6s;
     padding: 10px;
+    align-content: stretch;
+    justify-content: space-evenly;
   }
   .navItem {
-
     background-color:salmon;
     border: 5px solid salmon;
     padding: 3vh;
@@ -46,12 +56,14 @@
     cursor:pointer;
     transition-duration: 0.6s;
   }
+  .cocktails {
+    width: 100%;
+  }
 }
 
 .cocktails {
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: 100%;
 }
 
@@ -142,6 +154,11 @@ input:focus::placeholder {
 .beeg-button:hover {
   background-color: rgb(243, 86, 69);
   color: inherit;
+}
+
+#beegLetter {
+  font-size:x-large;
+  font-weight: bold;
 }
 
 .cell {
