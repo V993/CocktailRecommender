@@ -57,6 +57,10 @@ class ListCategories extends Component {
     }
   };
 
+  componentDidMount() {
+    this.handleSearchClick()
+  }
+
   render() {
     return (
       <div className="">

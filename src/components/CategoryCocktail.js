@@ -67,7 +67,6 @@ class CategorySearch extends Component {
       }
     }
   };
-
   render() {
     return (
       <div className="">
